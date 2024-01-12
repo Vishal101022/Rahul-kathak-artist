@@ -33,11 +33,36 @@ main {
 }
 
 .hero-section {
-  p {
-    font-size: 1.2rem;
-    background-color: $primary-color;
-    height: 550px;
-    overflow: hidden;
+  .text-wrapper {  
+    .text {
+      position: relative;
+      display: inline-block;
+      padding-top: 0.1em;
+      padding-right: 0.05em;
+      padding-bottom: 0.15em;
+      color: $action-color;
+      overflow: hidden;
+    }
+    
+      .word::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #fff;
+      border-left: 3px solid $primary-color;
+      animation: animate 4s steps(12) infinite;
+    }
+    @keyframes animate{
+      40%, 60%{
+        left: calc(100% + 4px);
+      }
+      100%{
+        left: 0%;
+      }
+    }
   }
   img {
     width: 480px;
@@ -45,6 +70,7 @@ main {
     object-fit: cover;
   }
 }
+
 // button custom hover
 .btn {
   &:hover {
