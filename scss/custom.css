@@ -30,11 +30,33 @@ main {
   padding: 0 3rem 0 3rem !important;
 }
 
-.hero-section p {
-  font-size: 1.2rem;
-  background-color: #fcf5ec;
-  height: 550px;
+.hero-section .text-wrapper .text {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+  color: #f8c348;
   overflow: hidden;
+}
+.hero-section .text-wrapper .word::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  border-left: 3px solid #fcf5ec;
+  animation: animate 4s steps(12) infinite;
+}
+@keyframes animate {
+  40%, 60% {
+    left: calc(100% + 4px);
+  }
+  100% {
+    left: 0%;
+  }
 }
 .hero-section img {
   width: 480px;
