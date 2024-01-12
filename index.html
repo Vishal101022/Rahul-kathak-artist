@@ -58,7 +58,7 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav left-menu mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link"  href="/">Home</a>
+                  <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="about.html">About</a>
@@ -123,38 +123,22 @@
               />
             </div>
             <div class="col-md-6 order-md-1">
-              <p class="p-4 long-text">
-                With a deep-rooted passion for performing arts, particularly
-                Kathak, I found myself drawn to the illustrious training of the
-                renowned Maestro of Kathak, Padma Vibhushan Pandit Birju Maharaj
-                and Vidushi Saswati Sen. As I embarked on this artistic journey,
-                I swiftly recognized the intricate connection between art and
-                society. Motivated by this realization, I made a firm decision
-                to use my performances as a means to raise awareness and promote
-                understanding within society.<br />
-                <br />
-                My profound adoration for Indian Art and Culture has propelled
-                me to tirelessly dedicate myself towards a significant objective
-                aimed at creating a positive impact. I have been fortunate to
-                actively engage with the people in my vicinity and state,
-                enlightening them about the indispensable significance of art,
-                literature, and culture in our lives.Through individualized
-                efforts, I have diligently worked towards ensuring their
-                comprehension and absorption of the fundamental roots and
-                essence of human existence.
-                <br />
-                My earnest endeavor has been to elucidate the authentic meaning
-                of being a human being and embracing the qualities inherent to
-                humanity.Art, literature, and culture are three extraordinary
-                phenomena that imbue individuals with the qualities that define
-                our humanness. In pursuit of this mission, I have organized
-                enlightening sessions that explicate the entire process of
-                personal development through the mediums of art,
-                dance, and music.
+              <h2 class="display-5 mt-5">Hi I'm Rahul</h2>
+              <span class="text-wrapper">
+                <span class="text word display-4">Kathak Dancer</span>
+              </span>
+              <p class="lead mt-3 pe-5">
+                With a profound love for the performing arts, especially Kathak,
+                I was irresistibly attracted to the exceptional guidance
+                provided by the legendary Kathak Maestro, Padma Vibhushan
+                <i>Pandit Birju Maharaj</i>, and the esteemed
+                <i>Vidushi Saswati Sen</i>.
               </p>
-              <button type="button" class="btn btn-dark mt-2 read-more">
-                Read More
-              </button>
+              <a href="/about.html">
+                <button type="button" class="btn btn-dark mt-2 read-more">
+                  Read More
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -366,7 +350,7 @@
     ></script>
     <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <!-- custom javascript -->
     <script>
       // navbar active link indicator
@@ -375,16 +359,6 @@
           link.setAttribute("aria-current", "page");
         } else {
           link.removeAttribute("aria-current");
-        }
-      });
-
-      // Here section scroll down button
-      document.querySelector(".read-more").addEventListener("click", () => {
-        let scrollText = document.querySelector(".hero-section p");
-        if (scrollText.style.overflow === "scroll") {
-          scrollText.style.overflow = "hidden";
-        } else {
-          scrollText.style.overflow = "scroll";
         }
       });
 
@@ -422,6 +396,22 @@
       }
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {}
+
+      // hero animation
+      const text = document.querySelector(".word");
+      const textLoad = () => {
+        setTimeout(() => {
+          text.textContent = "Artist";
+        }, 0);
+        setTimeout(() => {
+          text.textContent = "Kathak Dancer";
+        }, 4000);
+        setTimeout(() => {
+          text.textContent = "Choreographer";
+        }, 8000);
+      };
+      textLoad();
+      setInterval(textLoad, 12000);
     </script>
   </body>
 </html>
