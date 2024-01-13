@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- linking Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <!-- linking css file -->
+    <link rel="stylesheet" href="scss/custom.css" />
+    <title>Rahul | kathak Artist</title>
+  </head>
+  <script>
+    $(function () {
+      $("#navbar").load("partials/blocks/nav.html");
+      $("#footer").load("partials/blocks/footer.html");
+    });
+  </script>
+  <body>
+    <!-- navbar -->
+    <div id="navbar"></div>
+    <!-- hero section -->
+    <main>
+      <section>
+        <div class="container hero-section my-5">
+          <div class="row gx-0">
+            <div class="col-md-6 order-md-2">
+              <img
+                src="images/home.webp"
+                class="img-fluid w-100 hero-img"
+                alt="hero image"
+              />
+            </div>
+            <div class="col-md-6 order-md-1">
+              <h2 class="display-5 mt-5">Hi I'm Rahul</h2>
+              <span class="text-wrapper">
+                <span class="text word display-4">Kathak Dancer</span>
+              </span>
+              <p class="lead mt-3 pe-5">
+                With a profound love for the performing arts, especially Kathak,
+                I was irresistibly attracted to the exceptional guidance
+                provided by the legendary Kathak Maestro, Padma Vibhushan
+                <i>Pandit Birju Maharaj</i>, and the esteemed
+                <i>Vidushi Saswati Sen</i>.
+              </p>
+              <a href="about.html">
+                <button type="button" class="btn btn-dark mt-2 read-more">
+                  Read More
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- youtube video player and events notification-->
+      <section class="video-player">
+        <div class="container video-container">
+          <div class="row">
+            <div class="col-md-8 col-sm-12 offset-md-2">
+              <!-- <h3>youtube video heading</h3> -->
+              <h5>
+                <small class="text-body-secondary">June 2021</small>
+              </h5>
+              <div class="embed-responsive embed-responsive-16by9">
+                <div id="player"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Carousel-->
+      <section>
+        <div class="container mt-5 py-4">
+          <div class="row">
+            <div class="col-md-12">
+              <div
+                id="carouselExampleIndicators"
+                class="carousel carousel-dark slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="images/img-7.jpg"
+                      class="d-block w-100 img-fluid"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/img-3.jpg"
+                      class="d-block w-100 img-fluid"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/img-6.jpg"
+                      class="d-block w-100 img-fluid"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Events Notifications -->
+      <section>
+        <div class="container mt-5">
+          <h2>Upcoming Events</h2>
+          <div class="row">
+            <div class="col">
+              <div class="event-card">
+                <div class="event-image">
+                  <img src="path/to/image.jpg" alt="Event Image" />
+                </div>
+                <div class="event-details">
+                  <h3>Event Title</h3>
+                  <p>Date: July 15, 2023</p>
+                  <p>Location: Event Venue</p>
+                  <a href="#" class="btn btn-dark">Register</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="event-card">
+                <div class="event-image">
+                  <img src="path/to/image.jpg" alt="Event Image" />
+                </div>
+                <div class="event-details">
+                  <h3>Event Title</h3>
+                  <p>Date: July 15, 2023</p>
+                  <p>Location: Event Venue</p>
+                  <a href="#" class="btn btn-dark">Register</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add more upcoming events in similar structure -->
+          <h3>Past Events</h3>
+
+          <div class="col">
+            <div class="event-card past-event">
+              <div class="event-image">
+                <img
+                  src="images/PE_57th Milestome.webp"
+                  alt="PE_57th Milestome"
+                />
+              </div>
+              <div class="event-details">
+                <h4>Annual Cultural Fest of International Student's House</h4>
+                <p>Date: June 13, 2023</p>
+                <p>
+                  Location: International Student's House, Mall RD.<br />University
+                  of Delhi
+                </p>
+                <a href="#" class="btn btn-secondary btn-dark disabled"
+                  >Past Event</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <!-- Bootstrap javascript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- linking frontawesome icons-->
+    <script
+      src="https://kit.fontawesome.com/20f0338007.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- custom javascript -->
+    <script src="js/index.js"></script>
+  </body>
+</html>
