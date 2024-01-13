@@ -1,15 +1,13 @@
  <!--main headline-->
     <header>
-      <h1 class="display-5 text-center pt-4">
-        <a class="navbar-brand" href="#">RAHUL KATHAK</a>
-      </h1>
       <!-- navbar -->
       <nav
-        class="navbar navbar-expand-lg fs-5"
+        class="navbar navbar-expand-lg fs-5 fixed-top pt-3 pb-3 shadow-sm"
         aria-label="Offcanvas navbar large "
       >
         <div class="container-fluid">
           <!-- toggle button -->
+           <a class="navbar-brand pt-2 fs-5 mx-auto d-block d-lg-none " href="./index.html">RAHUL KATHAK</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -20,23 +18,26 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+          
           <div
             class="offcanvas offcanvas-start text-bg-white"
             tabindex="-1"
             id="offcanvasNavbar2"
           >
+         
             <div class="offcanvas-header">
               <!-- dismiss button -->
               <button
                 type="button"
-                class="btn-close btn-close-dark"
+                class="btn-close btn-close-dark "
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
               ></button>
             </div>
             <!--nav menu-->
-            <div class="offcanvas-body">
-              <ul class="navbar-nav left-menu mx-auto mb-2 mb-lg-0">
+            <div class="offcanvas-body flex flex-row justify-content-between">
+              <a class="navbar-brand pt-2 d-none d-sm-block " href="./index.html">RAHUL KATHAK</a>
+              <ul class="navbar-nav  mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link" href="/">Home</a>
                 </li>
