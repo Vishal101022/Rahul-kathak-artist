@@ -1,28 +1,35 @@
 <footer class="footer">
-      <div class="container mt-4">
-        <div class="row text-center">
-          <div class="col-md-12">
-            <a
-              href="https://www.facebook.com/profile.php?id=100008107844054"
-              class="fa-brands fa-facebook-f"
-              target="_blank"
-            ></a>
-            <a
-              href="https://instagram.com/rahulkumar_kathak?igshid=MzRlODBiNWFlZA=="
-              class="fa-brands fa-instagram"
-              target="_blank"
-            ></a>
-            <a
-              href="https://youtube.com/@rahulkumarrajak2898"
-              class="fa-brands fa-youtube"
-              target="_blank"
-            ></a>
-            <hr class="hr-break" />
-            <h5 class="my-4">
-              Copyright <span id="copywrite">&#169;</span>
-              <span id="year"></span> by Rahul Kathak
-            </h5>
-          </div>
-        </div>
+  <div class="container mt-4">
+    <div class="row text-center">
+      <div class="col-md-12 py-3">
+        <a
+          href="https://www.facebook.com/profile.php?id=100008107844054"
+          class="fa-brands fa-facebook-f"
+          target="_blank"
+        ></a>
+        <a
+          href="https://instagram.com/rahulkumar_kathak?igshid=MzRlODBiNWFlZA=="
+          class="fa-brands fa-instagram"
+          target="_blank"
+        ></a>
+        <a
+          href="https://youtube.com/@rahulkumarrajak2898"
+          class="fa-brands fa-youtube"
+          target="_blank"
+        ></a>
+        <hr class="hr-break" />
+        <h5 class="my-4">
+          Copyright <span id="copywrite">&#169;</span>
+          <span id="year"></span> by Rahul Kathak
+        </h5>
       </div>
-    </footer>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // footer year
+  let date = new Date();
+  y = date.getFullYear();
+  document.getElementById("year").innerHTML = y;
+</script>
