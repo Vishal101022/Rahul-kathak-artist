@@ -1,11 +1,4 @@
-// navbar active link indicator
-document.querySelectorAll(".nav-link").forEach((link) => {
-  if (link.href === window.location.href) {
-    link.setAttribute("aria-current", "page");
-  } else {
-    link.removeAttribute("aria-current");
-  }
-});
+
 
 // hero animation
 const text = document.querySelector(".word");
@@ -53,8 +46,4 @@ function onYouTubeIframeAPIReady() {
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {}
 
-// footer year
-let date = new Date();
-y = date.getFullYear();
-document.getElementById("year").innerHTML = y;
 
