@@ -111,76 +111,71 @@
             </div>
             <div class="row no-gutters">
               <div class="col-md-7">
-                <div class="contact-wrap w-100 p-md-5 p-4">
-                  <h3 class="mb-4">Contact Me</h3>
+                <div class="contact-wrap w-100 p-md-5 p-4 border border-1">
+                  <h3 class="mb-4">Get in touch</h3>
                   <div id="form-message-warning" class="mb-4"></div>
                   <div id="form-message-success" class="mb-4">
                     <!-- Your message was sent, thank you! -->
                   </div>
                   <form
+                  onsubmit="return false;"
                     method="POST"
                     id="contactForm"
                     name="contactForm"
-                    class="contactForm"
+                    class="contactForm needs-validation"
+                    novalidate
                   >
                     <div class="row">
-                      <div class="col-md-6">
+                      <div class="col-md-12">
                         <div class="form-group">
-                          <label class="label" for="name">Full Name</label>
+                          <label class="form-label p-1" for="name"> </label>
                           <input
                             type="text"
                             class="form-control"
                             name="name"
                             id="name"
                             placeholder="Name"
+                            required
                           />
+                          <div class="invalid-feedback">Please enter your name.</div>
                         </div>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-md-12">
                         <div class="form-group">
-                          <label class="label" for="email">Email Address</label>
+                          <label class="form-label p-1" for="email"></label>
                           <input
                             type="email"
                             class="form-control"
                             name="email"
                             id="email"
                             placeholder="Email"
+                            required
                           />
+                          <div class="valid-feedback">Looks good!</div>
+                          <div class="invalid-feedback">Please provide a valid email.</div>
                         </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label class="label" for="subject">Subject</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            name="subject"
-                            id="subject"
-                            placeholder="Subject"
-                          />
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="form-label p-1" for="#"></label>
+                            <textarea
+                              name="message"
+                              class="form-control"
+                              id="message"
+                              cols="30"
+                              rows="4"
+                              placeholder="Message"
+                              required
+                            ></textarea>
+                            <div class="invalid-feedback">Please enter a message.</div>
+                            <div class="valid-feedback">Nice one!</div>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label class="label" for="#">Message</label>
-                          <textarea
-                            name="message"
-                            class="form-control"
-                            id="message"
-                            cols="30"
-                            rows="4"
-                            placeholder="Message"
-                          ></textarea>
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <input
-                            type="submit"
-                            value="Send Message"
-                            class="btn btn-dark mt-3"
-                          />
-                          <div class="submitting"></div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <button class="btn btn-dark mt-3" type="submit">
+                              Submit form
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -206,21 +201,11 @@
       src="https://kit.fontawesome.com/20f0338007.js"
       crossorigin="anonymous"
     ></script>
+    <!-- smtp js -->
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <!-- sweetalert js -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- custom javascript -->
-    <script>
-      // navbar active link indicator
-      document.querySelectorAll(".nav-link").forEach((link) => {
-        if (link.href === window.location.href) {
-          link.setAttribute("aria-current", "page");
-        } else {
-          link.removeAttribute("aria-current");
-        }
-      });
-
-      // footer year
-      let date = new Date();
-      y = date.getFullYear();
-      document.getElementById("year").innerHTML = y;
-    </script>
+    <script src="js/contact.js"></script>
   </body>
 </html>
